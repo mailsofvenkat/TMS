@@ -1,0 +1,4 @@
+ms_ms:
+    resource: "@MSMsBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,7 @@
+ms_ms_user:
+    resource: "@MSMsBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+ms_ms_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MSMsBundle:Default:index }

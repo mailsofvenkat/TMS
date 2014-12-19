@@ -1,0 +1,43 @@
+body
+{
+	background-image: url('/musicsite/web/bundles/msms/images/home_bg.jpg') !important;
+}
+.create_profile_btn 
+{
+width: 202px;
+}
+
+.btn-success {
+color: #ffffff;
+background-color: #5cb85c;
+border-color: #4cae4c;
+}
+.btn {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.428571429;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid transparent;
+border-radius: 4px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+.content_area{background-color: rgba(255,255,255); background-color: rgba(255,255,255,.9); min-height: 800px;}
+.google_ad_300x250 {
+border-collapse: collapse;
+border: 1px solid #ccc;
+background-color: #EBEBEB;
+line-height: 290px;
+height: 250px;
+width: 300px;
+text-align: center;
+}

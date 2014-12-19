@@ -1,0 +1,120 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/main.css') }}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/bootstrap.css') }}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/theme.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block body -%}
+    <div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12 content_area">
+        <br><br>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h3 class="hidden-xs dark_grey">Welcome to TheMusicSite.com</h3>
+                <h4 class="visible-xs dark_grey">Welcome to TheMusicSite.com</h4>
+                <hr class="hr_subline hidden-xs" style="width: 20%; border-width: 3px; margin-top: 12px;">
+            </div>
+        </div>
+        <br>
+	  <form action="{{ path('user_create') }}" method="post" {{ form_enctype(userform) }}>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-7 col-sm-9">
+                        <div class="row form-group">
+                            <div class="
+                            col-sm-4 text-right text-left-xs field_label">Profile Name:</div>
+                            <div class="col-sm-8 no_col_left_padding">{{ userform(form.nick_name, { 'attr': {'class': 'form-control'} }) }}</div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 text-right text-left-xs field_label">@Username:</div>
+                            <div class="col-sm-8 no_col_left_padding">
+                                <div>{{ userform(form.first_name, { 'attr': {'class': 'form-control'} }) }}</div>
+                                <div class="grey" style="padding-top: 5px;">e.g. https://themusicsite.com/<strong>username</strong></div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 text-right text-left-xs field_label">Email Address:</div>
+                            <div class="col-sm-8 no_col_left_padding">{{ userform(form.email, { 'attr': {'class': 'form-control'} }) }}</div>
+                        </div>
+                        <br>
+                        <div class="row form-group">
+                            <div class="col-sm-4 text-right text-left-xs field_label">Password:</div>
+                            <div class="col-sm-6 no_col_left_padding">{{ userform(form.password, { 'attr': {'class': 'form-control'} }) }}</div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 text-right text-left-xs field_label">Confirm Password:</div>
+                            <div class="col-sm-6 no_col_left_padding"><input type="password" class="form-control" name="confirmpwd" ></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="google_ad_300x250 pull-right pull-left hidden-sm hidden-xs">
+                          <span class="grey" style="display: inline-block; line-height: 25px;">
+                              Google Ad<br>Medium Rectangle<br>(300 x 250)
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="row">
+            <div class="col-sm-12">
+                <div class="row form-group">
+                    <div class="col-sm-3 col-md-2 text-right text-left-xs account_type_field_margin">Account Types(s):</div>
+                    <div class="col-sm-8 col-md-9 no_col_left_padding grey">
+                        <div>Which of the following are you? (Tick all applicable)</div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6 col-xxs-12 form-group">
+                                <div class="form-group"><strong>Fan</strong> Account</div>
+                                <ul class="tms_list">
+								
+                                    <li>{{ userform(form.user_type, {'attr': {'value': '1'}}) }}</li>
+                                </ul>
+                            </div>
+                            <div class="clearfix visible-xxs form-group"></div>
+                            <div class="visible-xxs"><hr style="border-color: #ccc;width: 92%;"></div>
+                            <div class="col-md-3 col-xs-6 col-xxs-12 form-group account_block_separator1">
+                                <div class="form-group"><strong>Creative</strong> Account</div>
+                               
+                            </div>
+                            <div class="clearfix visible-xxs form-group"></div>
+                            <div class="visible-xxs"><hr style="border-color: #ccc;width: 92%;"></div>
+                            <div class="col-md-3 col-xs-6 col-xxs-12 form-group account_block_separator2">
+                                <div class="form-group"><strong>Label/Manager</strong> Account</div>
+                               
+                            </div>
+                            <div class="clearfix visible-xxs form-group"></div>
+                            <div class="visible-xxs"><hr style="border-color: #ccc;width: 92%;"></div>
+                            <div class="col-md-3 col-xs-6 col-xxs-12 form-group account_block_separator1">
+                                <div class="form-group"><strong>Industry</strong> Account</div>
+                                
+                            </div>
+                            <div class="clearfix visible-xxs"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+				{{ form_widget(form.join) }}
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="google_ad_250x250 visible-sm visible-xs" style="margin: 0 auto;">
+                      <span class="grey" style="display: inline-block; line-height: 25px;">
+                          Google Ad<br>Square<br>(250 x 250)
+                      </span>
+                </div>
+            </div>
+        </div>
+        <br><br>
+	{{ form_end(userform) }}
+    </div>
+{% endblock %}

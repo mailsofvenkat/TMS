@@ -1,0 +1,159 @@
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/main.css') }}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/bootstrap.css') }}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{ asset('bundles/msms/css/theme.css') }}" type="text/css" media="all" />
+{% endblock %}
+{{ include ('MSMsBundle:User:header.html.twig') }}
+{% block body -%}
+	<div id="displayed"><div class="container theme-showcase" id="mainDiv"><style type="text/css">
+    body{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-bottom: 0px;
+        padding-top: 65px;
+
+    }
+    .footerMine{display: none;}
+    .homepage_content{background-color: rgba(255,255,255); background-color: rgba(255,255,255,.7); min-height: 800px;}
+    .home_top_margin{padding-top: 60px;}
+    .welcome_title{color: #fff; text-align: right;}
+    .home_login_row{padding-bottom: 10px; color: #4e4e4e; text-align: right;}
+    .home_login_row a,.homepage_content_footer a{color: #4e4e4e !important;}
+    .homepage_content_footer{color:#8c7f8a}
+
+    #displayed{margin-top: -13px;}
+    .tms_list{list-style: none; padding: 0px;}
+    .tms_list li{margin-left: 15px; float: left;}
+
+    .create_profile_btn{width: 202px;}
+
+    @media (max-width: 767px) {
+        .welcome_title{text-align: center;}
+        .home_login_row{text-align: left;}
+    }
+
+    @media (max-width: 991px) {
+        .tms_list{display: inline-block;}
+    }
+
+</style>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome_title home_top_margin">
+                    <div class="row">
+                    <br>
+                    <br>
+                        <h2>Welcome to TheMusicSite.com</h2>
+
+                        <h4>The world's music social network</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 homepage_content home_top_margin">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <h3>Log In</h3>
+                </div>
+            </div>
+            <div class="row home_login_row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    Username
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control input-sm">
+                </div>
+            </div>
+            <div class="row home_login_row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    Password
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control input-sm">
+                </div>
+            </div>
+            <div class="row home_login_row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs hidden-sm">&nbsp;</div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 text-right">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12 text-left text-right-sm text-right-xs">
+                            <input type="checkbox"> Remember Me
+                        </div>
+                        <div class="col-md-5 col-sm-12 text-right text-left-xs text-left-sm">
+                            <button class="btn btn-success" onclick="window.open('../../prototype-general-flat/prototypes/index.html#Member_Homepage','_self')">&nbsp;Log In&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs hidden-sm">&nbsp;</div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 text-left-sm">
+                    <a href="../../prototype-general-flat/prototypes/index.html#Forgot_Password_Page">Forgot Password?</a> | <a href="../../prototype-general-flat/prototypes/index.html#Forgot_Username_Page">Forgot Username?</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>Join for Free</h3>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <a href="{{ path('user_new') }}"><div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-3 text-center-xs">            
+                    <button class="btn btn-success create_profile_btn" onclick="window.open('../../prototype-general-flat/prototypes/index.html#Welcome_Step_1','_self')">&nbsp;Create a FREE Profile&nbsp;</button>
+                </div></a>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-3 text-center-xs">
+                    <br>
+                    <p>Or</p>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-3 text-center-xs">
+                    <a href="../../prototype-general-flat/prototypes/index.html#Welcome_Step_1"><img src="/musicsite/web/bundles/msms/images/home_twitter_signup.jpg" alt=""></a>
+                    <p></p>
+                    <a href="../../prototype-general-flat/prototypes/index.html#Welcome_Step_1"><img src="/musicsite/web/bundles/msms/images/home_fb_signup.jpg" alt=""></a><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-3 text-center-sm text-center-xs homepage_content_footer">
+                    <hr style="border-bottom:1px solid #666;">
+                    <div class="row">
+                        <ul class="tms_list">
+                            <li><a href="../../prototype-general-flat/prototypes/index.html#Privacy_Policy_Page">Privacy Policy</a></li>
+                            <li><a href="../../prototype-general-flat/prototypes/index.html#Terms_and_Conditions_Page">Terms &amp; Conditions</a></li>
+                            <li><a href="../../prototype-general-flat/prototypes/index.html#JobOpportunities_Overview">Job Opps</a></li>
+                            <li><a href="../../prototype-general-flat/prototypes/index.html#Invite_a_Friend_Pop_Up">Invite a Friend</a></li>
+                            <li><a href="../../prototype-general-flat/prototypes/index.html#Contact_Us_Page">Contact Us</a></li>
+                            <li><a href="../../prototype-advertising-flat/prototypes/index.html#Advertise_Home">Advertise</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-3 text-center-sm text-center-xs homepage_content_footer">
+                    <br>
+                    © Copyright 2014 TheMusicSite.com
+                      <br>
+                      <br>
+                      <br>
+                    Image Credit: www.photography.mattfield.com
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+</div></div></div>
+{{ include ('MSMsBundle:User:footer.html.twig') }}
+{% endblock %}

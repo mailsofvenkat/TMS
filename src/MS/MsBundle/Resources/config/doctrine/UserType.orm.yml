@@ -1,0 +1,12 @@
+MS\MsBundle\Entity\UserType:
+    type: entity
+    table: UserType
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true

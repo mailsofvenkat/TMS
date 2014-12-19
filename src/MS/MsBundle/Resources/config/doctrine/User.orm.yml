@@ -1,0 +1,102 @@
+MS\MsBundle\Entity\User:
+    type: entity
+    table: User
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        user_type:
+            type: string
+            length: 255
+            nullable: true
+        nick_name:
+            type: string
+            length: 255
+            nullable: true
+        first_name:
+            type: string
+            length: 255
+            nullable: true
+        last_name:
+            type: string
+            length: 255
+            nullable: true
+        email:
+            type: string
+            length: 255
+            nullable: true
+        password:
+            type: string
+            length: 255
+            nullable: true
+        salt:
+            type: string
+            length: 255
+            nullable: true
+        status:
+            type: string
+            length: 255
+            nullable: true
+        id_chat_status:
+            type: integer
+            nullable: true
+        sex:
+            type: string
+            length: 255
+            nullable: true
+        descriptionMe:
+            type: string
+            length: 255
+            nullable: true
+        country:
+            type: string
+            length: 255
+            nullable: true
+        city:
+            type: string
+            length: 255
+            nullable: true
+        date_of_birth:
+            type: date
+            nullable: true
+        date_reg:
+            type: datetime
+            nullable: true
+        date_last_login:
+            type: datetime
+            nullable: true
+        type:
+            type: string
+            length: 255
+            nullable: true
+        facebook_url:
+            type: string
+            length: 255
+            nullable: true
+        twitter_url:
+            type: string
+            length: 255
+            nullable: true
+        youtube_url :
+            type: string
+            length: 255
+            nullable: true
+        myspace_url:
+            type: string
+            length: 255
+            nullable: true
+        id_paypal:
+            type: string
+            length: 255
+            nullable: true
+        id_media:
+            type: integer
+            nullable: true
+        record_label :
+            type: string
+            length: 255
+            nullable: true
+        id_music_genre:
+            type: integer
+            nullable: true

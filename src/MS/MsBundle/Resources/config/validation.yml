@@ -1,0 +1,11 @@
+MS\MsBundle\Entity\User:
+    properties:
+        email:
+            - NotBlank: ~
+            - Email: ~
+        nick_name:
+            - NotBlank: ~
+        first_name:
+            - NotBlank: ~
+        password:
+            - NotBlank: ~
