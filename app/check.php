@@ -1,5 +1,5 @@
 <?php
-
+// This is comment
 require_once dirname(__FILE__).'/SymfonyRequirements.php';
 
 $lineSize = 70;
