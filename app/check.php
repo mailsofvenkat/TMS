@@ -1,5 +1,6 @@
 <?php
 // This is comment
+//This is one more comment from testbranch
 require_once dirname(__FILE__).'/SymfonyRequirements.php';
 
 $lineSize = 70;
