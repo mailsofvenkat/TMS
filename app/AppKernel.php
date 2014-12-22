@@ -1,5 +1,5 @@
 <?php
-
+//This is a comment from test2 branch
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
