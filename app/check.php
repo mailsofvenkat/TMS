@@ -1,5 +1,7 @@
 <?php
 
+// This is a test comment to work on beanches
+
 require_once dirname(__FILE__).'/SymfonyRequirements.php';
 
 $lineSize = 70;
